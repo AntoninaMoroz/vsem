@@ -15,22 +15,29 @@ public class Integral {
         int steps = 100;
         double step = (finish - start) / steps;
         double area = 0;
+        double height = 0;
 
-        double height =0;
-        for (int i = 0; i <steps ; i++) {
+        for (int i = 0; i < steps ; i++) {
+
             if (Math.sin(i * step) < 0.1 * secant){
                 height = Math.sin(i * step);
-            } else{
+            }
+            else{
                 height = 0.1 * secant ;
             }
             double currentArea = height * step;
-            area = area + currentArea;
+            area += currentArea;
         }
         return area;
     }
+
+//the area limited by the following functions x = 0 .. 3.14; y = sin(x); y = 0.3
 
     public static void main(String[] args) {
         System.out.println(getIntegral(3));
 
     }
 }
+/* result
+0.8515778760255804
+ */

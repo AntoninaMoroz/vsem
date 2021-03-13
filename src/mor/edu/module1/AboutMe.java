@@ -46,3 +46,17 @@ public class AboutMe {
 
     }
 }
+
+
+/* result:
+Hello!
+My name is Antonina Moroz
+My age is 21 years
+So, I was born in 1999
+My height is 1.6 cms
+My weight is 58.2 kgs
+I have M clothing sizes
+The population of Ukraine is 41902416 people
+The cost of the contract is 26000 hryvnia
+I am studying Java now! It is true
+ */
