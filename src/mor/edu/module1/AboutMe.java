@@ -41,9 +41,6 @@ public class AboutMe {
         boolean myActivities = true;
         System.out.println("I am studying Java now! It is " + myActivities);
 
-
-
-
     }
 }
 
