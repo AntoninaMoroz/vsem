@@ -67,3 +67,11 @@ public class Palindrome {
 
     }
 }
+/* result
+The first way :
+Я несу гусеня! - is a palindrome - true
+The second way :
+Я несу гусеня! - is a palindrome - true
+The third way :
+Я несу гусеня! - is a palindrome - true
+ */
