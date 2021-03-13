@@ -19,11 +19,11 @@ public class Harry {
 
         // download a text version of a novel about Harry Potter to string
 
-     String text = new String(Files.readAllBytes(Paths.get("/Users/User/Desktop/Java/harry.txt")));
+        String text = new String(Files.readAllBytes(Paths.get("/Users/User/Desktop/Java/harry.txt")));
 
         // clean from a punctuation signs
 
-        text = text.replaceAll("[^A-Za-z ']","");
+        text = text.replaceAll("[^A-Za-z ']", "");
 
         // split the novel into an array of words
 
@@ -45,12 +45,12 @@ public class Harry {
 
         Arrays.sort(distincts);
 
-        for (int i = 0; i < 100 ; i++) {
+        for (int i = 0; i < 100; i++) {
 
             System.out.println(distincts[i]);
         }
     }
-
+}
     /* result
     'Alohomora
 'Atta
@@ -153,12 +153,3 @@ BC
 BED
 BEHIND
      */
-
-
-
-
-
-
-
-
-}
