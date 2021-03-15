@@ -20,7 +20,7 @@ public class LaboratoryWork1 {
 
         String text = new String(Files.readAllBytes(Paths.get("/Users/User/Desktop/Java/harry.txt")));
 
-        //Take  the array of distinct words from Harry Potter .
+        //Count the LINES where the word "Harry" is met.
 
         String[] lines = text.split("\\n");
 
@@ -33,11 +33,23 @@ public class LaboratoryWork1 {
         }
         System.out.println(counter);
 
-        //Take  the array of distinct words from Harry Potter .
+        //Find the longest word in the above text.
 
         text = text.replaceAll("[^A-Za-z ']", "");
 
         String[] words = text.split(" ");
+
+        int maxLength = 0;
+        String maxWord = "";
+        for (int i = 0; i < words.length; i++) {
+            if (words[i].length() > maxLength){
+                maxLength = words[i].length();
+                maxWord = words[i];
+            }
+        }
+        System.out.println(maxWord);
+
+        //Take the array of distinct words from Harry Potter .
 
         String stringOfDistincts = "";
 
@@ -75,6 +87,7 @@ public class LaboratoryWork1 {
 
 /* result:
 1084
+interestinglooking
 80
 69496448
 -1898553908
