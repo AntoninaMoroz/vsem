@@ -25,6 +25,7 @@ public class Cone {
         this.radius = radius;
         this.height = height;
     }
+
     // getter and setter
 
     public double getRadius() {
@@ -48,21 +49,25 @@ public class Cone {
     public double getSlantHeight() {
         return Math.sqrt(Math.pow(this.radius,2) + Math.pow(this.height,2));
     }
+
     // 2. Lateral surface area of a cone: L = πrs = πr√(r^2 + h^2)
 
     public double getLateralSurfaceArea(){
         return Math.PI * this.radius * getSlantHeight();
     }
+
     // 3. Base surface area of a cone: B = πr^2
 
     public double getBaseSurfaceArea(){
         return Math.PI * Math.pow(this.radius,2);
     }
+
     // 4. Total surface area of a cone: A = L + B = πrs + πr^2
 
     public  double getTotalArea(){
         return getLateralSurfaceArea() + getBaseSurfaceArea();
     }
+
     // 5. Volume of a cone: V = (1/3)B * h = (1/3)πr^2h
 
     public double getVolume(){
@@ -74,12 +79,12 @@ public class Cone {
     @Override
     public String toString() {
         return
-                "Cone{" + "radius=" + radius + ", height=" + height + '}' +
+                "Cone{" + "radius=" + radius + ", height=" + height +
                 "Slant height of a cone = " + getSlantHeight() + " m;" +
                 "Lateral surface area of a cone = " + getLateralSurfaceArea() + " m^2;" +
                 "Base surface area of a cone = " + getBaseSurfaceArea() + " m^2;" +
                 "Total surface area of a cone = " + getTotalArea() + " m^2;" +
-                "Volume of a cone = " + getVolume() + " m^3."
+                "Volume of a cone = " + getVolume() + " m^3." + '}'
                 ;
     }
 
