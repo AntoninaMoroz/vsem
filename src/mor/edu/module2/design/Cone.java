@@ -16,7 +16,7 @@ public class Cone {
     private double radius;
     private double height;
 
-    // constructor
+    // constructors
 
     public Cone() {
     }
@@ -79,12 +79,12 @@ public class Cone {
     @Override
     public String toString() {
         return
-                "Cone{" + "radius=" + radius + ", height=" + height +
-                "Slant height of a cone = " + getSlantHeight() + " m;" +
-                "Lateral surface area of a cone = " + getLateralSurfaceArea() + " m^2;" +
-                "Base surface area of a cone = " + getBaseSurfaceArea() + " m^2;" +
-                "Total surface area of a cone = " + getTotalArea() + " m^2;" +
-                "Volume of a cone = " + getVolume() + " m^3." + '}'
+                "Cone{" + "radius=" + radius + ", height=" + height +'\'' +
+                        "Slant height of a cone = " + getSlantHeight() + " m;" +'\'' +
+                        "Lateral surface area of a cone = " + getLateralSurfaceArea() + " m^2;" +'\'' +
+                        "Base surface area of a cone = " + getBaseSurfaceArea() + " m^2;" + '\'' +
+                        "Total surface area of a cone = " + getTotalArea() + " m^2;" + '\'' +
+                        "Volume of a cone = " + getVolume() + " m^3." + '}'
                 ;
     }
 
@@ -103,3 +103,19 @@ public class Cone {
         return Objects.hash(getRadius(), getHeight());
     }
 }
+
+/* in main class:
+
+Cone c3 = new Cone(4,9);
+        System.out.println(c3);
+
+result:
+
+Cone{radius=4.0, height=9.0'
+Slant height of a cone = 9.848857801796104 m;
+'Lateral surface area of a cone = 123.76439726549263 m^2;
+'Base surface area of a cone = 50.26548245743669 m^2;
+'Total surface area of a cone = 174.0298797229293 m^2;
+'Volume of a cone = 150.79644737231007 m^3.}
+
+ */

@@ -1,6 +1,8 @@
 package mor.edu;
 
 import mor.edu.module2.design.Cone;
+import mor.edu.module2.inheritance.Person;
+import mor.edu.module2.inheritance.Table;
 
 public class Main {
 
@@ -26,6 +28,12 @@ public class Main {
         System.out.println("Volume of a cone = " + c3.getVolume() + " m^3");
 
         System.out.println(c3.toString());
+
+
+        Person p1 = new Person();
+
+        Table t1 = new Table(1,3,"Beige","Wood",true);
+        System.out.println(t1);
 
 
     }
