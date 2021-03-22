@@ -210,8 +210,10 @@ public class Person {
         if (o == null || getClass() != o.getClass()) return false;
         Person person = (Person) o;
         return getAge() == person.getAge() && Double.compare(person.getHeight(), getHeight()) == 0 && Double.compare(person.getWight(),
-                getWight()) == 0 && isIsmarried() == person.isIsmarried() && isIshavingСhildren() == person.isIshavingСhildren() && Objects.equals(getFirstName(), person.getFirstName()) && Objects.equals(getLastName(), person.getLastName()) && Objects.equals(getPatronynicName(), person.getPatronynicName()) && Objects.equals(getAddress(), person.getAddress()) && Objects.equals(getPassportID(),
-                person.getPassportID()) && Objects.equals(getNationality(), person.getNationality()) && Objects.equals(getProfession(), person.getProfession()) && Objects.equals(getPhoneNumber(), person.getPhoneNumber()) && Objects.equals(getEmail(), person.getEmail()) && Objects.equals(getHobby(), person.getHobby());
+                getWight()) == 0 && isIsmarried() == person.isIsmarried() && isIshavingСhildren() == person.isIshavingСhildren() && Objects.equals(getFirstName(),
+                person.getFirstName()) && Objects.equals(getLastName(), person.getLastName()) && Objects.equals(getPatronynicName(), person.getPatronynicName()) && Objects.equals(getAddress(), person.getAddress()) && Objects.equals(getPassportID(),
+                person.getPassportID()) && Objects.equals(getNationality(), person.getNationality()) && Objects.equals(getProfession(), person.getProfession()) && Objects.equals(getPhoneNumber(), person.getPhoneNumber()) && Objects.equals(getEmail(),
+                person.getEmail()) && Objects.equals(getHobby(), person.getHobby());
     }
 
     @Override
