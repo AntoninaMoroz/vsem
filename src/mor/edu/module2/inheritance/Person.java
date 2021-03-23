@@ -1,5 +1,7 @@
 package mor.edu.module2.inheritance;
 
+import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
 import java.util.Objects;
 
 /**
@@ -18,12 +20,12 @@ public class Person {
     private String patronynicName;
     private String address;
     private String passportID;
-    private String nationality;
-    private int age;
+    private String identificationСode;
+    private LocalDate dateOfBirth;
     private double height;
     private double wight;
     private String profession;
-    private boolean ismarried;
+    private String maritalStatus;
     private boolean ishavingСhildren;
     private String phoneNumber;
     private String email;
@@ -34,26 +36,26 @@ public class Person {
     public Person() {
     }
 
-    public Person(String firstName, String lastName, String patronynicName, String address, String passportID,
-                  String nationality, int age, double height, double wight, String profession, boolean ismarried,
-                  boolean ishavingСhildren, String phoneNumber, String email, String hobby) {
+    public Person(String firstName, String lastName, String patronynicName,
+                  String address, String passportID, String identificationСode,
+                  LocalDate dateOfBirth, double height, double wight, String profession,
+                  String maritalStatus, boolean ishavingСhildren, String phoneNumber, String email, String hobby) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.patronynicName = patronynicName;
         this.address = address;
         this.passportID = passportID;
-        this.nationality = nationality;
-        this.age = age;
+        this.identificationСode = identificationСode;
+        this.dateOfBirth = dateOfBirth;
         this.height = height;
         this.wight = wight;
         this.profession = profession;
-        this.ismarried = ismarried;
+        this.maritalStatus = maritalStatus;
         this.ishavingСhildren = ishavingСhildren;
         this.phoneNumber = phoneNumber;
         this.email = email;
         this.hobby = hobby;
     }
-
     // getter and setter
 
     public String getFirstName() {
@@ -96,20 +98,20 @@ public class Person {
         this.passportID = passportID;
     }
 
-    public String getNationality() {
-        return nationality;
+    public String getIdentificationСode() {
+        return identificationСode;
     }
 
-    public void setNationality(String nationality) {
-        this.nationality = nationality;
+    public void setIdentificationСode(String identificationСode) {
+        this.identificationСode = identificationСode;
     }
 
-    public int getAge() {
-        return age;
+    public LocalDate getDateOfBirth() {
+        return dateOfBirth;
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    public void setDateOfBirth(LocalDate dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
     }
 
     public double getHeight() {
@@ -136,12 +138,12 @@ public class Person {
         this.profession = profession;
     }
 
-    public boolean isIsmarried() {
-        return ismarried;
+    public String getMaritalStatus() {
+        return maritalStatus;
     }
 
-    public void setIsmarried(boolean ismarried) {
-        this.ismarried = ismarried;
+    public void setMaritalStatus(String maritalStatus) {
+        this.maritalStatus = maritalStatus;
     }
 
     public boolean isIshavingСhildren() {
@@ -179,7 +181,6 @@ public class Person {
 
     // Override toString () method
 
-
     @Override
     public String toString() {
         return "Person{" +
@@ -188,36 +189,54 @@ public class Person {
                 ", patronynicName='" + patronynicName + '\'' +
                 ", address='" + address + '\'' +
                 ", passportID='" + passportID + '\'' +
-                ", nationality='" + nationality + '\'' +
-                ", age=" + age +
+                ", identificationСode='" + identificationСode + '\'' +
+                ", dateOfBirth=" + dateOfBirth +
                 ", height=" + height +
                 ", wight=" + wight +
                 ", profession='" + profession + '\'' +
-                ", ismarried=" + ismarried +
+                ", maritalStatus='" + maritalStatus + '\'' +
                 ", ishavingСhildren=" + ishavingСhildren +
                 ", phoneNumber='" + phoneNumber + '\'' +
                 ", email='" + email + '\'' +
                 ", hobby='" + hobby + '\'' +
+                ", age='" + this.getAge() +
                 '}';
     }
 
     //Override hash() and equals() methods
-
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Person person = (Person) o;
-        return getAge() == person.getAge() && Double.compare(person.getHeight(), getHeight()) == 0 && Double.compare(person.getWight(),
-                getWight()) == 0 && isIsmarried() == person.isIsmarried() && isIshavingСhildren() == person.isIshavingСhildren() && Objects.equals(getFirstName(),
-                person.getFirstName()) && Objects.equals(getLastName(), person.getLastName()) && Objects.equals(getPatronynicName(), person.getPatronynicName()) && Objects.equals(getAddress(), person.getAddress()) && Objects.equals(getPassportID(),
-                person.getPassportID()) && Objects.equals(getNationality(), person.getNationality()) && Objects.equals(getProfession(), person.getProfession()) && Objects.equals(getPhoneNumber(), person.getPhoneNumber()) && Objects.equals(getEmail(),
-                person.getEmail()) && Objects.equals(getHobby(), person.getHobby());
+        return Double.compare(person.getHeight(), getHeight()) == 0 && Double.compare(person.getWight(), getWight()) == 0 && isIshavingСhildren() == person.isIshavingСhildren() && Objects.equals(getFirstName(), person.getFirstName()) && Objects.equals(getLastName(), person.getLastName()) && Objects.equals(getPatronynicName(), person.getPatronynicName()) && Objects.equals(getAddress(), person.getAddress()) && Objects.equals(getPassportID(), person.getPassportID()) && Objects.equals(getIdentificationСode(), person.getIdentificationСode()) && Objects.equals(getDateOfBirth(), person.getDateOfBirth()) && Objects.equals(getProfession(), person.getProfession()) && Objects.equals(getMaritalStatus(), person.getMaritalStatus()) && Objects.equals(getPhoneNumber(), person.getPhoneNumber()) && Objects.equals(getEmail(), person.getEmail()) && Objects.equals(getHobby(), person.getHobby());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getFirstName(), getLastName(), getPatronynicName(), getAddress(), getPassportID(), getNationality(), getAge(), getHeight(), getWight(), getProfession(), isIsmarried(), isIshavingСhildren(), getPhoneNumber(), getEmail(), getHobby());
+        return Objects.hash(getFirstName(), getLastName(), getPatronynicName(), getAddress(), getPassportID(), getIdentificationСode(), getDateOfBirth(), getHeight(), getWight(), getProfession(), getMaritalStatus(), isIshavingСhildren(), getPhoneNumber(), getEmail(), getHobby());
+    }
+
+
+    //full years method
+
+    public int getAge() {
+
+        int years = (int) ChronoUnit.YEARS.between(this.getDateOfBirth(), LocalDate.now());
+        return years;
+    }
+
+    //adult method
+
+    public boolean isAdult() {
+        boolean result = true;
+        if (this.getAge() >= 18) {
+            result = true;
+        } else {
+            result = false;
+        }
+        return result;
     }
 }
+
