@@ -3,6 +3,7 @@ package mor.edu;
 import mor.edu.module2.design.Cone;
 import mor.edu.module2.inheritance.Person;
 import mor.edu.module2.inheritance.Table;
+import mor.edu.module2.polymorphism.Cone2;
 
 public class Main {
 
@@ -35,6 +36,9 @@ public class Main {
         Table t1 = new Table(1,3,"Beige","Wood",true);
         System.out.println(t1);
 
+        Cone2 c22 = new Cone2(2,5);
+        System.out.println(c22.toJSON());
+        System.out.println(c22.toXML());
 
     }
 }
